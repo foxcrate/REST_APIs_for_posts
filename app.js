@@ -46,7 +46,7 @@ app.use("/auth", authRoutes);
 
 app.use((error, req, res, next) => {
   console.log("-- error middleware --");
-  console.log(error);
+  console.log({ error });
   let status = error.statusCode || 500;
   let errorBody;
   if (error.body) {
